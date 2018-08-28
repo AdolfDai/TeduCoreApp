@@ -18,6 +18,7 @@ using TeduCoreApp.Data.IRepositories;
 using TeduCoreApp.Data.EF.Repositories;
 using TeduCoreApp.Application.Interfaces;
 using TeduCoreApp.Application.Implementation;
+using TeduCoreApp.Application.AutoMapper;
 
 namespace TeduCoreApp
 {
@@ -41,14 +42,35 @@ namespace TeduCoreApp
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            // Configure Identity
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            });
+
+
+            services.AddAutoMapper();
             // Add application services.
             //register indetity
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
             //register AutoMApper
+            
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
-
+           
             services.AddTransient<IEmailSender, EmailSender>();
             //register file DbInitializer seeding data
             services.AddTransient<DbInitializer>();
@@ -62,7 +84,7 @@ namespace TeduCoreApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -84,8 +106,11 @@ namespace TeduCoreApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                //chỉnh định routes cho Admin Areas
+                routes.MapRoute(name: "areaRoute",
+                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
-            dbInitializer.Seed().Wait();
+            //dbInitializer.Seed().Wait();
         }
     }
 }

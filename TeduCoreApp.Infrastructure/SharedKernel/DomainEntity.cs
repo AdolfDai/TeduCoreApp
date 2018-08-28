@@ -5,7 +5,7 @@ using System.Text;
 namespace TeduCoreApp.Infrastructure.SharedKernel
 {
     //kiểu Generic T : ứng với từng loại data entity sẽ có kiểu Id khác nhau
-    public class DomainEntity<T>
+    public abstract class DomainEntity<T>
     {
         public T Id { get; set; }
         //hàm istransient sẽ kiểm tra có giá trị gán vào kiểu T chưa
