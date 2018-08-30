@@ -5,10 +5,8 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using TeduCoreApp.Data.EF.Configurations;
 using TeduCoreApp.Data.EF.Extensions;
 using TeduCoreApp.Data.Entities;
@@ -16,15 +14,15 @@ using TeduCoreApp.Data.Interfaces;
 
 namespace TeduCoreApp.Data.EF
 {
-    public class AppDbContext:IdentityDbContext<AppUser,AppRole,Guid>
+    public class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
-
         }
 
         //khai báo các db set cho mỗi bảng
         public DbSet<Language> Languages { set; get; }
+
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Function> Functions { get; set; }
 
@@ -64,6 +62,7 @@ namespace TeduCoreApp.Data.EF
         {
             //một số configuration lẻ mà ta muốn khai báo riêng mà không cần tạo class config
             //ở đây là configuration cho việc indentity
+
             #region Identity Config
 
             builder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims").HasKey(x => x.Id);
@@ -93,7 +92,7 @@ namespace TeduCoreApp.Data.EF
             builder.AddConfiguration(new ProductTagConfiguration());
             builder.AddConfiguration(new SystemConfigConfiguration());
             builder.AddConfiguration(new TagConfiguration());
-            
+
             //base.OnModelCreating(builder);
         }
 
@@ -104,12 +103,12 @@ namespace TeduCoreApp.Data.EF
         public override int SaveChanges()
         {
             var modified = ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added);
-            foreach(EntityEntry item in modified)
+            foreach (EntityEntry item in modified)
             {
                 var changedOrAddedItem = item.Entity as IDateTracking;
-                if(changedOrAddedItem != null)
+                if (changedOrAddedItem != null)
                 {
-                    if(item.State == EntityState.Added)
+                    if (item.State == EntityState.Added)
                     {
                         changedOrAddedItem.DateCreated = DateTime.Now;
                     }

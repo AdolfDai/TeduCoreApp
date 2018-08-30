@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TeduCoreApp.Utilities.Constant
+﻿namespace TeduCoreApp.Utilities.Constant
 {
     public class CommonConstants
     {

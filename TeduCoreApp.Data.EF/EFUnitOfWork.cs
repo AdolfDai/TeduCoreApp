@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TeduCoreApp.Infrastructure.Interfaces;
+﻿using TeduCoreApp.Infrastructure.Interfaces;
 
 namespace TeduCoreApp.Data.EF
 {
@@ -9,6 +6,7 @@ namespace TeduCoreApp.Data.EF
     public class EFUnitOfWork : IUnitOfWork
     {
         public readonly AppDbContext _context;
+
         public EFUnitOfWork(AppDbContext context)
         {
             _context = context;

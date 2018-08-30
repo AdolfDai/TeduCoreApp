@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TeduCoreApp.Data.Entities;
 using TeduCoreApp.Data.Enum;
@@ -15,6 +14,7 @@ namespace TeduCoreApp.Data.EF
         private readonly AppDbContext _context;
         private UserManager<AppUser> _userManager;
         private RoleManager<AppRole> _roleManager;
+
         public DbInitializer(AppDbContext context, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _context = context;
@@ -128,11 +128,9 @@ namespace TeduCoreApp.Data.EF
                         AdvertistmentPositions = new List<AdvertistmentPosition>(){
                         new AdvertistmentPosition(){Id="product-detail-left",Name="Bên trái"}
                     } },
-
                 };
                 _context.AdvertistmentPages.AddRange(pages);
             }
-
 
             if (_context.Slides.Count() == 0)
             {
@@ -156,7 +154,6 @@ namespace TeduCoreApp.Data.EF
                 };
                 _context.Slides.AddRange(slides);
             }
-
 
             if (_context.Sizes.Count() == 0)
             {
@@ -248,7 +245,6 @@ namespace TeduCoreApp.Data.EF
                 });
             }
             await _context.SaveChangesAsync();
-
         }
     }
 }
