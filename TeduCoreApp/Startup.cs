@@ -16,6 +16,7 @@ using TeduCoreApp.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using TeduCoreApp.Helpers;
 
 namespace TeduCoreApp
 {
@@ -70,17 +71,20 @@ namespace TeduCoreApp
             services.AddTransient<IEmailSender, EmailSender>();
             //register file DbInitializer seeding data
             services.AddTransient<DbInitializer>();
+            //Khai báo Claim
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
             //register interface tại tầng domain
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
             //register service tại tầng application
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-
-            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+            services.AddTransient<IFunctionService, FunctionService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddFile("Logs/tedu-{Date}.txt");
             if (env.IsDevelopment())
@@ -105,7 +109,7 @@ namespace TeduCoreApp
                    template: "{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapRoute(name: "areaRoute",
-                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                    template: "{area:exists}/{controller=Login}/{action=Index}/{id?}");
             });
             //dbInitializer.Seed().Wait();
         }

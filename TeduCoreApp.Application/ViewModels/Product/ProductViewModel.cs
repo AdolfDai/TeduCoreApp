@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using TeduCoreApp.Data.Enum;
 
-namespace TeduCoreApp.Application.ViewModels
+namespace TeduCoreApp.Application.ViewModels.Product
 {
     public class ProductViewModel
     {

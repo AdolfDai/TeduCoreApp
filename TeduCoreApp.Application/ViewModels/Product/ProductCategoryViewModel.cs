@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TeduCoreApp.Data.Enum;
 
-namespace TeduCoreApp.Application.ViewModels
+namespace TeduCoreApp.Application.ViewModels.Product
 {
     public class ProductCategoryViewModel
     {

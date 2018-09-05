@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TeduCoreApp.Application.ViewModels;
+using TeduCoreApp.Application.ViewModels.Product;
 
 namespace TeduCoreApp.Application.Interfaces
 {

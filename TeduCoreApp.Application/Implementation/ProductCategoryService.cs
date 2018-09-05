@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TeduCoreApp.Application.Interfaces;
-using TeduCoreApp.Application.ViewModels;
+using TeduCoreApp.Application.ViewModels.Product;
 using TeduCoreApp.Data.Entities;
 using TeduCoreApp.Data.Enum;
 using TeduCoreApp.Data.IRepositories;
