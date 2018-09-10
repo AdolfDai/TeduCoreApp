@@ -21,6 +21,7 @@
     <link href="~/lib/notifyjs/dist/styles/metro/notify-metro.css" rel="stylesheet" />
     <!-- Custom Theme Style -->
     <link href="~/admin-site/css/custom.css" rel="stylesheet" />
+    @RenderSection("Styles",false)
 </head>
 
 <body class="nav-md">
@@ -194,7 +195,9 @@
         <script src="~/lib/flot.curvedlines/curvedLines.js"></script>*@
     <!-- DateJS -->
     @*<script src="~/lib/DateJS/build/date.js"></script>*@
-
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
+    <!-- Mustache -->
+    <script src="~/lib/mustache/mustache.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="~/lib/moment/min/moment.min.js"></script>
     <script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -205,5 +208,6 @@
     <script src="~/app/shared/tedu.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="~/admin-site/js/custom.js"></script>
+    @RenderSection("Scripts", false)
 </body>
 </html>
