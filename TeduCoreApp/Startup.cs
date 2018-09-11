@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using TeduCoreApp.Helpers;
+using TeduCoreApp.Infrastructure.Interfaces;
 
 namespace TeduCoreApp
 {
@@ -74,6 +75,10 @@ namespace TeduCoreApp
             //Khai báo Claim
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+
+            //Khai báo Interface tầng Infrastructure và Data.EF
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
             //register interface tại tầng domain
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
