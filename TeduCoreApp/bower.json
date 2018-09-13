@@ -23,6 +23,7 @@
     "animate.css": "~3.7.0",
     "DateJS": "~1.0.0-rc3",
     "mustache": "~2.3.2",
-    "twbs-pagination": "~1.4.2"
+    "twbs-pagination": "~1.4.2",
+    "jQuery-EasyUI": "~1.5.3"
   }
 }
