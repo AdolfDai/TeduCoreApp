@@ -1,0 +1,240 @@
+2018-09-15T14:49:36.8521603+07:00  [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2018-09-15T14:49:39.2702666+07:00  [INF] Executed DbCommand ("457"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:49:39.5723318+07:00  [INF] Executed DbCommand ("170"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:49:39.6640377+07:00  [INF] Executed DbCommand ("62"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-09-15T14:49:39.9969728+07:00  [INF] Executed DbCommand ("248"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-09-15T14:49:40.0300120+07:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-09-15T14:49:40.1004605+07:00  [INF] Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-09-15T14:49:40.3151145+07:00  [INF] Executed DbCommand ("185"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-09-15T14:49:40.3595418+07:00  [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-09-15T14:49:40.4318265+07:00  [INF] Executed DbCommand ("62"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-09-15T14:49:40.6644277+07:00  [INF] Executed DbCommand ("223"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:49:40.7264021+07:00  [INF] Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:49:40.7385338+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:49:47.8803480+07:00 0HLGQRV679FD7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/   (ca22a1cb)
+2018-09-15T14:49:55.2925122+07:00 0HLGQRV679FD7:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2018-09-15T14:49:55.3129666+07:00 0HLGQRV679FD7:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-09-15T14:49:55.3254633+07:00 0HLGQRV679FD7:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-09-15T14:49:55.6877314+07:00 0HLGQRV679FD7:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-09-15T14:49:55.7163022+07:00 0HLGQRV679FD7:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 487.994ms (afa2e885)
+2018-09-15T14:49:55.8696027+07:00 0HLGQRV679FD7:00000001 [INF] Request finished in 8662.4657ms 302  (791a596a)
+2018-09-15T14:49:56.0774595+07:00 0HLGQRV679FD7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:2573/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-09-15T14:49:56.7542135+07:00 0HLGQRV679FD7:00000002 [INF] Executing action method "TeduCoreApp.Controllers.AccountController.Login (TeduCoreApp)" with arguments (["/"]) - ModelState is Valid (ba7f4ac2)
+2018-09-15T14:49:56.9063813+07:00 0HLGQRV679FD7:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-09-15T14:50:14.4777248+07:00 0HLGQRV679FD7:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-09-15T14:50:16.1638808+07:00 0HLGQRV679FD7:00000002 [INF] Executed action "TeduCoreApp.Controllers.AccountController.Login (TeduCoreApp)" in 19847.4084ms (afa2e885)
+2018-09-15T14:50:16.1788420+07:00 0HLGQRV679FD7:00000002 [INF] Request finished in 20102.1975ms 200 text/html; charset=utf-8 (791a596a)
+2018-09-15T14:50:16.3359969+07:00 0HLGQRV679FD7:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:2573/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-09-15T14:50:16.3902166+07:00 0HLGQRV679FD9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-09-15T14:50:16.3926969+07:00 0HLGQRV679FD8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/css/site.css   (ca22a1cb)
+2018-09-15T14:50:16.4493348+07:00 0HLGQRV679FD8:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\css\site.css"' (27b0a520)
+2018-09-15T14:50:16.4545524+07:00 0HLGQRV679FD7:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-09-15T14:50:16.5083834+07:00 0HLGQRV679FD9:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-09-15T14:50:16.5359583+07:00 0HLGQRV679FDB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-09-15T14:50:16.6238612+07:00 0HLGQRV679FDC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-09-15T14:50:16.6742672+07:00 0HLGQRV679FDA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-09-15T14:50:16.7145989+07:00 0HLGQRV679FDC:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-09-15T14:50:16.7191550+07:00 0HLGQRV679FDA:00000001 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-09-15T14:50:16.7261562+07:00 0HLGQRV679FDB:00000001 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\js\site.js"' (27b0a520)
+2018-09-15T14:50:16.7479794+07:00 0HLGQRV679FDB:00000001 [INF] Request finished in 289.7347ms 200 application/javascript (791a596a)
+2018-09-15T14:50:16.7619837+07:00 0HLGQRV679FDC:00000001 [INF] Request finished in 242.9982ms 200 application/javascript (791a596a)
+2018-09-15T14:50:16.8830986+07:00 0HLGQRV679FDB:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:2573/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-09-15T14:50:17.1348434+07:00 0HLGQRV679FDB:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Dai Nguyen\source\repos\TeduCoreApp\TeduCoreApp\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-09-15T14:50:17.1517426+07:00 0HLGQRV679FD8:00000001 [INF] Request finished in 391.9079ms 200 text/css (791a596a)
+2018-09-15T14:50:17.2259881+07:00 0HLGQRV679FDA:00000001 [INF] Request finished in 488.5012ms 200 application/javascript (791a596a)
+2018-09-15T14:50:17.2441623+07:00 0HLGQRV679FD7:00000003 [INF] Request finished in 792.1384ms 200 text/css (791a596a)
+2018-09-15T14:50:17.2604313+07:00 0HLGQRV679FDB:00000002 [INF] Request finished in 336.4232ms 200 application/javascript (791a596a)
+2018-09-15T14:50:17.2879562+07:00 0HLGQRV679FD9:00000001 [INF] Request finished in 840.0205ms 200 application/javascript (791a596a)
+2018-09-15T14:52:33.6219642+07:00  [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2018-09-15T14:52:33.9760057+07:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:52:34.0166004+07:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:52:34.0503730+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-09-15T14:52:34.0925898+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-09-15T14:52:34.1020475+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-09-15T14:52:34.1148846+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-09-15T14:52:34.1429188+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-09-15T14:52:34.1526087+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-09-15T14:52:34.1652389+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-09-15T14:52:34.1790341+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:52:34.1919461+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:52:34.2045990+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:52:36.4573205+07:00 0HLGQS0PBJ7U1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/   (ca22a1cb)
+2018-09-15T14:52:36.7072406+07:00 0HLGQS0PBJ7U1:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2018-09-15T14:52:36.7202399+07:00 0HLGQS0PBJ7U1:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-09-15T14:52:36.7361847+07:00 0HLGQS0PBJ7U1:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-09-15T14:52:36.7490417+07:00 0HLGQS0PBJ7U1:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-09-15T14:52:36.7599575+07:00 0HLGQS0PBJ7U1:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 63.466ms (afa2e885)
+2018-09-15T14:52:36.7741376+07:00 0HLGQS0PBJ7U1:00000001 [INF] Request finished in 338.1868ms 302  (791a596a)
+2018-09-15T14:52:36.8072640+07:00 0HLGQS0PBJ7U1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:2573/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-09-15T14:52:37.0642816+07:00 0HLGQS0PBJ7U1:00000002 [INF] Executing action method "TeduCoreApp.Controllers.AccountController.Login (TeduCoreApp)" with arguments (["/"]) - ModelState is Valid (ba7f4ac2)
+2018-09-15T14:52:37.0871601+07:00 0HLGQS0PBJ7U1:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-09-15T14:54:26.3479267+07:00  [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TeduCoreApp.Data.EF " (9958f5bb)
+2018-09-15T14:54:26.7638965+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:54:26.7914320+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:54:26.8154165+07:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-09-15T14:54:26.8477232+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-09-15T14:54:26.8583799+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-09-15T14:54:26.8694065+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-09-15T14:54:26.8831705+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-09-15T14:54:26.9001874+07:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-09-15T14:54:26.9105315+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-09-15T14:54:26.9216351+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:54:26.9320544+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:54:26.9418366+07:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = N'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-09-15T14:54:28.6767000+07:00 0HLGQS1QSV2N4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/   (ca22a1cb)
+2018-09-15T14:54:28.9880223+07:00 0HLGQS1QSV2N4:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2018-09-15T14:54:29.0055776+07:00 0HLGQS1QSV2N4:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-09-15T14:54:29.0260234+07:00 0HLGQS1QSV2N4:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-09-15T14:54:29.0409099+07:00 0HLGQS1QSV2N4:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-09-15T14:54:29.0596775+07:00 0HLGQS1QSV2N4:00000001 [INF] Executed action "TeduCoreApp.Controllers.HomeController.Index (TeduCoreApp)" in 70.6824ms (afa2e885)
+2018-09-15T14:54:29.0742759+07:00 0HLGQS1QSV2N4:00000001 [INF] Request finished in 418.1934ms 302  (791a596a)
+2018-09-15T14:54:49.1008928+07:00 0HLGQS1QSV2N5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:2573/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-09-15T14:54:49.2014234+07:00 0HLGQS1QSV2N5:00000001 [INF] Executing action method "TeduCoreApp.Controllers.AccountController.Login (TeduCoreApp)" with arguments (["/"]) - ModelState is Valid (ba7f4ac2)
+2018-09-15T14:54:49.2135931+07:00 0HLGQS1QSV2N5:00000001 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-09-15T14:54:53.6122231+07:00 0HLGQS1QSV2N5:00000001 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-09-15T14:54:54.9149999+07:00 0HLGQS1QSV2N5:00000001 [INF] Executed action "TeduCoreApp.Controllers.AccountController.Login (TeduCoreApp)" in 5736.0474ms (afa2e885)
+2018-09-15T14:54:54.9335435+07:00 0HLGQS1QSV2N5:00000001 [INF] Request finished in 5845.36ms 200 text/html; charset=utf-8 (791a596a)
